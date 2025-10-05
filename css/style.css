@@ -146,8 +146,8 @@ nav a:hover {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 500px;
-  height: 600px;
+  width: 50%;
+  height: 60%;
   opacity: 0.9;
   z-index: 2;
 }
