@@ -562,3 +562,86 @@ footer {
   fill: var(--secondary);
   opacity: 0.8;
 }
+
+
+/* Agregar al final del archivo style.css */
+
+/* Menu móvil oculto por defecto */
+.mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100vh;
+  background: white;
+  z-index: 9999;
+  transition: left 0.3s ease;
+  padding-top: 80px;
+}
+
+.mobile-nav.active {
+  left: 0;
+}
+
+.mobile-nav a {
+  display: block;
+  padding: 1rem 2rem;
+  color: var(--dark);
+  text-decoration: none;
+  border-bottom: 1px solid #eee;
+  font-size: 1.1rem;
+}
+
+.mobile-nav a:hover {
+  background: var(--accent);
+  color: var(--primary);
+}
+
+.close-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .mobile-nav {
+    display: block;
+  }
+
+  .hero-logo {
+    position: static;
+    width: 50%;
+    height: 60%;
+    margin: 20% auto 0 auto;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+
+  .hero-content {
+    padding: 0rem;
+    max-width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+  }
+}
